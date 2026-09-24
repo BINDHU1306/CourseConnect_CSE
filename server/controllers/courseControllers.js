@@ -120,8 +120,8 @@ async function updateCourses(req, res) {
         ]
 
        editableFields.forEach((fields)=>{
-        if(req.body[field] !== undefined){
-            course[field]=req.body[field]
+        if(req.body[fields] !== undefined){
+            course[fields]=req.body[fields]
         }
        })
        await course.save()
